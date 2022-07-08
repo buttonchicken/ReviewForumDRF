@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "5be0a31e-745f-42d9-9cba-fe79ca3f932e",
+		"name": "ReviewForum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register as Seller1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Seller1\",\n    \"password\":\"Seller1\",\n    \"mobile_number\":\"8800825143\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/register?seller=True",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					],
+					"query": [
+						{
+							"key": "seller",
+							"value": "True"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register as Seller2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Seller2\",\n    \"password\":\"Seller2\",\n    \"mobile_number\":\"9876543210\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/register?seller=True",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					],
+					"query": [
+						{
+							"key": "seller",
+							"value": "True"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register as Customer1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Customer1\",\n    \"password\":\"Customer1\",\n    \"mobile_number\":\"7503815982\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/register?seller=False",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					],
+					"query": [
+						{
+							"key": "seller",
+							"value": "False"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register as Customer2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Customer2\",\n    \"password\":\"Customer2\",\n    \"mobile_number\":\"9400802982\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/register?seller=False",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					],
+					"query": [
+						{
+							"key": "seller",
+							"value": "False"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Customer2\",\n    \"password\":\"Customer2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODExNDM4LCJpYXQiOjE2NTcyMTk0MzgsImp0aSI6IjZlMTZlOTk5ZTIwZDQ4ZTk5OGQ1OGJlOWEzYjRmYzNlIiwidXNlcm5hbWUiOiJTZWxsZXIxIn0.hQeT3RYXm3o3EPS4wqU3nZGj2jURavdxmMpD7wJi6E4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "body",
+							"value": "This is a dummy product",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/button_chicken/Desktop/download.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODExNDM4LCJpYXQiOjE2NTcyMTk0MzgsImp0aSI6IjZlMTZlOTk5ZTIwZDQ4ZTk5OGQ1OGJlOWEzYjRmYzNlIiwidXNlcm5hbWUiOiJTZWxsZXIxIn0.hQeT3RYXm3o3EPS4wqU3nZGj2jURavdxmMpD7wJi6E4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "body",
+							"value": "This is also a dummy product",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/button_chicken/Desktop/download.jpeg"
+						},
+						{
+							"key": "product_id",
+							"value": "d4c579fb-1427-4a4d-b718-fad67e227d96",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/edit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODExNDM4LCJpYXQiOjE2NTcyMTk0MzgsImp0aSI6IjZlMTZlOTk5ZTIwZDQ4ZTk5OGQ1OGJlOWEzYjRmYzNlIiwidXNlcm5hbWUiOiJTZWxsZXIxIn0.hQeT3RYXm3o3EPS4wqU3nZGj2jURavdxmMpD7wJi6E4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"product_id\":\"d4c579fb-1427-4a4d-b718-fad67e227d96\"   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODE3MjA2LCJpYXQiOjE2NTcyMjUyMDYsImp0aSI6IjA2ZWQ4Y2FiMGVmOTQyNTZhMzMyMjU0NTE4NmU1M2RkIiwidXNlcm5hbWUiOiJDdXN0b21lcjIifQ.nuAeanuMq_Hj9_vpusVhYDl_TGrKrdkSYu6NG2-NbfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\":\"ade9a20c-8469-4a50-a35e-3f28e77b74da\",\n    \"rating\":0,\n    \"comment\":\"Very bad!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/add_review",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"add_review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODE3MjAzLCJpYXQiOjE2NTcyMjUyMDMsImp0aSI6IjQyZTBlZDM4MzA0MjRjNDJhNWNhYWE3ZmQ2MzEwZjgxIiwidXNlcm5hbWUiOiJDdXN0b21lcjEifQ.Ms0Ttht6j7c-OJYTTJKLyqJoBALa8RhHU7cPnzq142E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review_id\":\"be9dab61-a5ae-4c75-a791-46e49da27aae\",\n    \"comment\":\"Changed\",\n    \"rating\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/edit_review",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"edit_review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODE3MjAzLCJpYXQiOjE2NTcyMjUyMDMsImp0aSI6IjQyZTBlZDM4MzA0MjRjNDJhNWNhYWE3ZmQ2MzEwZjgxIiwidXNlcm5hbWUiOiJDdXN0b21lcjEifQ.Ms0Ttht6j7c-OJYTTJKLyqJoBALa8RhHU7cPnzq142E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review_id\":\"be9dab61-a5ae-4c75-a791-46e49da27aae\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/delete_review",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"delete_review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reply to Review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODE3MjAzLCJpYXQiOjE2NTcyMjUyMDMsImp0aSI6IjQyZTBlZDM4MzA0MjRjNDJhNWNhYWE3ZmQ2MzEwZjgxIiwidXNlcm5hbWUiOiJDdXN0b21lcjEifQ.Ms0Ttht6j7c-OJYTTJKLyqJoBALa8RhHU7cPnzq142E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review_id\":\"be9dab61-a5ae-4c75-a791-46e49da27aae\",\n    \"reply\":\"Chala ja\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/add_reply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"add_reply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Product by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5ODgyOTc0LCJpYXQiOjE2NTcyOTA5NzQsImp0aSI6IjI0MzJhZjRjODdkMzRiN2ZiZDFlYTUwZmIwODM1ZmM3IiwidXNlcm5hbWUiOiJTZWxsZXIxIn0.bP33C10j_VnmptmW8h_0eAyNzG6xQHebN8d0nZH7YDY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\":\"c55ee934-41cb-436d-bfec-6f1494150af8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/viewbyID",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"viewbyID"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
