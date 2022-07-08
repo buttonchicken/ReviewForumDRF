@@ -1,2 +1,4 @@
 # ReviewForumDRF
 Backend code (using Django Rest Framework) for review forum which lets a seller list his/her product and a customer post reviews about it. 
+detailed documentaion of the API's - https://docs.google.com/document/d/1UZmme3W9IT6PwvmsM1w3UwuVMf8vkmt3FEFjocrK3DQ/edit?usp=sharing
+**postman collection included to test the API's easily**
