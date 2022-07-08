@@ -7,7 +7,7 @@ Python version required >= 3.9.5
 There are 2 ways to run this project:
 1. Activate the virutal environment where all the dependencies are installed.
 2. Install the dependencies using **pip install -r requirements.txt**
-After that:
+
 Server can be started using **python3 manage.py runserver**
 Migrations can be done using **python3 manage.py makemigrations** followed by **python3 manage.py migrate**
 Afterwards a superuser can be made using **python3 manage.py createsuperuser**
