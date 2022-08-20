@@ -4,9 +4,7 @@ detailed documentaion of the API's - https://docs.google.com/document/d/1UZmme3W
 **postman collection included to test the API's easily**
 
 Python version required >= 3.9.5
-There are 2 ways to run this project:
-1. Activate the virutal environment where all the dependencies are installed.
-2. Install the dependencies using **pip install -r requirements.txt**
+You can run this project by installing the dependencies using **pip install -r requirements.txt**
 
 Server can be started using **python3 manage.py runserver**
 Migrations can be done using **python3 manage.py makemigrations** followed by **python3 manage.py migrate**
